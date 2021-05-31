@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <title>
+        Family
+    </title>
+</head>
+
+<body>
+    <center>
+        <h1>
+            Family
+        </h1>
+        <img id="book" src="family.jpg">
+        <br>
+        <div id="name">My Family Book</div>
+        <br>
+        <button id="Next" onclick="Next()">
+            Next
+        </button>
+        <script>
+            var img = ["father.png", "mother.jpg", "harish.png", "bigma.jpg", "2sis.jpg", "3sis.jfif", "sis.jpg"];
+            var names = ["Vijayakhumar", "Banumathi", "Harish", "Komala", "Priya", "Ramya", "Harini"];
+            var i = 0;
+            function Next() {
+                i++;
+                var numbers_of_family_member_in_array = 7
+                if (i > numbers_of_family_member_in_array) {
+                    i = 0;
+                }
+                var nextimg=img[i];
+                var nextname=names[i];
+                document.getElementById("book").src = nextimg;
+                document.getElementById("name").innerHTML = nextname;
+            }
+        </script>
+    </center>
+</body>
+
+</html>
